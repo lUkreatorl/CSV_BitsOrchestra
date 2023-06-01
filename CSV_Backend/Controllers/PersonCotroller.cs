@@ -67,8 +67,8 @@ public class PersonController : ControllerBase
     }
 
 
-    [HttpPut("Update/{id}")]
-    public async Task<IActionResult> UpdatePerson(int id, Person person)
+    [HttpPut("Update")]
+    public async Task<IActionResult> UpdatePerson(Person person)
     {
         var result = await _personRepository.Update(person);
         return Ok(result);
